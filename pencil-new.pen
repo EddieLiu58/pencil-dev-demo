@@ -1,0 +1,746 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Kitamura Home",
+      "clip": true,
+      "width": 1440,
+      "height": 5650,
+      "fill": "#0C0A09",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "8EwCk",
+          "name": "Hero",
+          "clip": true,
+          "width": "fill_container",
+          "height": 980,
+          "fill": "#111111",
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "KvHyl",
+              "x": 0,
+              "y": 0,
+              "name": "Hero Image",
+              "opacity": 0.55,
+              "metadata": {
+                "type": "unsplash",
+                "username": "huumsauna",
+                "link": "https://unsplash.com/@huumsauna",
+                "author": "HUUM"
+              },
+              "width": 1440,
+              "height": 980,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1770625468064-ed83f3320169?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NTQ3NTd8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              }
+            },
+            {
+              "type": "text",
+              "id": "en93u",
+              "x": 1080,
+              "y": 120,
+              "name": "vTitle",
+              "fill": "#F5F1E8",
+              "content": "北村\n創業一九二三",
+              "lineHeight": 1.2,
+              "fontFamily": "Noto Serif JP",
+              "fontSize": 72,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "IMQl4",
+              "x": 120,
+              "y": 622,
+              "name": "sub",
+              "fill": "#F3EDE1",
+              "content": "百年の技と現代の感性を重ね、静けさの中で味わう一皿へ。",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 26
+            },
+            {
+              "type": "frame",
+              "id": "QABq6",
+              "x": 120,
+              "y": 744,
+              "name": "cta",
+              "width": 220,
+              "height": 56,
+              "fill": "#B08A4A",
+              "cornerRadius": 999,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qSwnG",
+                  "name": "ctaTxt",
+                  "fill": "#1A1205",
+                  "content": "ご予約はこちら",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 18,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZiW2e",
+              "x": 80,
+              "y": 34,
+              "name": "heroNav",
+              "width": 1280,
+              "height": 62,
+              "fill": "#0F0B08CC",
+              "cornerRadius": 12,
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "s5wbt",
+                  "name": "brand",
+                  "fill": "#F5EBD8",
+                  "content": "北村 1923",
+                  "fontFamily": "Noto Serif JP",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "3uSVS",
+                  "name": "navR",
+                  "gap": 28,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uR9TL",
+                      "name": "nav1",
+                      "fill": "#F8F0DD",
+                      "content": "物語",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hHEjb",
+                      "name": "nav2",
+                      "fill": "#F8F0DD",
+                      "content": "献立",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "b1BkN",
+                      "name": "nav3",
+                      "fill": "#F8F0DD",
+                      "content": "予約",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "h2nmP",
+              "x": 120,
+              "y": 560,
+              "name": "hKicker",
+              "fill": "#CFBF9F",
+              "content": "創業 1923",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "EqlQ8",
+          "name": "Story",
+          "width": "fill_container",
+          "height": 720,
+          "fill": "#11100D",
+          "gap": 64,
+          "padding": 96,
+          "children": [
+            {
+              "type": "frame",
+              "id": "9L8AA",
+              "name": "storyL",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2xAbz",
+                  "name": "h2",
+                  "fill": "#EFE4CF",
+                  "content": "百年の技が息づく一皿",
+                  "fontFamily": "Noto Serif JP",
+                  "fontSize": 56,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "q6UBy",
+                  "name": "sKicker",
+                  "fill": "#CFBF9F",
+                  "content": "物語",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "7Zt42",
+                  "name": "p1",
+                  "fill": "#D6C8AC",
+                  "content": "厳選素材と職人の技。1923年から受け継ぐ日本料理の精神を、現代の感性で再構築します。",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 22
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bXUOF",
+              "name": "storyImg",
+              "metadata": {
+                "type": "unsplash",
+                "username": "tommaomaoer",
+                "link": "https://unsplash.com/@tommaomaoer",
+                "author": "tommao wang"
+              },
+              "clip": true,
+              "width": 520,
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1714889988208-1ea67650789f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NTQ3NTd8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 22
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qG0dF",
+          "name": "Middle Canvas Sequence",
+          "width": "fill_container",
+          "height": 1900,
+          "fill": "#090806",
+          "gap": 44,
+          "children": [
+            {
+              "type": "frame",
+              "id": "rEfC0",
+              "name": "left",
+              "width": 360,
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "N40ts",
+                  "name": "mk",
+                  "fill": "#A89370",
+                  "content": "CANVAS SCROLL STORY",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "pyLWu",
+                  "name": "mh",
+                  "fill": "#F2E8D2",
+                  "content": "中段 Canvas 滾動劇場",
+                  "fontFamily": "Noto Serif JP",
+                  "fontSize": 48,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "22xNj",
+                  "name": "md",
+                  "fill": "#CDBD9D",
+                  "content": "以固定舞台 Canvas 逐幀切換，模擬參考站中段滾動敘事。",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qrqmv",
+              "name": "stage",
+              "clip": true,
+              "width": 844,
+              "height": 1410,
+              "fill": "#12100E",
+              "cornerRadius": 24,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "0CMFB",
+                  "x": 0,
+                  "y": 0,
+                  "name": "layer1",
+                  "opacity": 0.95,
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "fancywalls",
+                    "link": "https://unsplash.com/@fancywalls",
+                    "author": "Fancy Walls | Peel & Stick Wallpaper & Wall Murals"
+                  },
+                  "width": 844,
+                  "height": 1410,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1676474511128-b2e20f267c28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NTc5MTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "h5rDM",
+                  "x": 0,
+                  "y": 0,
+                  "name": "layer2",
+                  "opacity": 0.42,
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "elsbethcat",
+                    "link": "https://unsplash.com/@elsbethcat",
+                    "author": "Beth Macdonald"
+                  },
+                  "width": 844,
+                  "height": 1410,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1609558546186-46b663a9aff6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NTc5MTF8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "soHhI",
+                  "x": 0,
+                  "y": 0,
+                  "name": "layer3",
+                  "opacity": 0.18,
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "lifeof_peter_",
+                    "link": "https://unsplash.com/@lifeof_peter_",
+                    "author": "Peter Thomas"
+                  },
+                  "width": 844,
+                  "height": 1410,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1771030669954-a02e803c68a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NTc5MTJ8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "0DwxO",
+                  "x": 0,
+                  "y": 0,
+                  "name": "over",
+                  "width": 844,
+                  "height": 1410,
+                  "fill": "#08060566"
+                },
+                {
+                  "type": "frame",
+                  "id": "JqPYg",
+                  "x": 24,
+                  "y": 24,
+                  "name": "canvasTag",
+                  "width": 250,
+                  "height": 44,
+                  "fill": "#0F0B08CC",
+                  "cornerRadius": 999,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Vt4U8",
+                      "name": "canvasTxt",
+                      "fill": "#EEDFC5",
+                      "content": "CANVAS SEQUENCE",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qSH2a",
+          "name": "Menu Highlights",
+          "width": "fill_container",
+          "height": 1040,
+          "fill": "#0D0C0A",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": 96,
+          "children": [
+            {
+              "type": "text",
+              "id": "PmamA",
+              "name": "title2",
+              "fill": "#F1E7D2",
+              "content": "季節の献立",
+              "fontFamily": "Noto Serif JP",
+              "fontSize": 52,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "oQzW5",
+              "name": "menuSub",
+              "fill": "#F1E7D2",
+              "content": "今宵のハイライト",
+              "fontFamily": "Noto Serif JP",
+              "fontSize": 44,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "nbPyI",
+              "name": "cards",
+              "width": "fill_container",
+              "height": 620,
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "AxB3k",
+                  "name": "card1",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1B1712",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "PJVgk",
+                      "name": "img1",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "mihaomusic",
+                        "link": "https://unsplash.com/@mihaomusic",
+                        "author": "MIHAO"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 360,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1681310483042-64aa6776f112?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NTQ3NTh8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "8qMXA",
+                      "name": "t1",
+                      "fill": "#F1E6D0",
+                      "content": "旬の握り",
+                      "fontFamily": "Noto Serif JP",
+                      "fontSize": 30,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lb3Y6",
+                      "name": "d1",
+                      "fill": "#CFBF9F",
+                      "content": "その日最良の鮮魚を、最適な温度と握りで。",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lFpZj",
+                  "name": "card2",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1B1712",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "W7sYX",
+                      "name": "img2",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "abduzeedo",
+                        "link": "https://unsplash.com/@abduzeedo",
+                        "author": "Fabio Sasso"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 360,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1580679630809-03fd24148ecf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NTU3NjR8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "TlC5V",
+                      "name": "t2",
+                      "fill": "#F1E6D0",
+                      "content": "炭火焼会席",
+                      "fontFamily": "Noto Serif JP",
+                      "fontSize": 30,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "z5t8J",
+                      "name": "d2",
+                      "fill": "#CFBF9F",
+                      "content": "炭の香りをまとった旬菜と肉を、季節の流れで一皿ずつ。",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dvHaq",
+                  "name": "card3",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1B1712",
+                  "cornerRadius": 20,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KphqA",
+                      "name": "img3",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "naohe01",
+                        "link": "https://unsplash.com/@naohe01",
+                        "author": "Naohe Ehsta"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 360,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1734041291024-15273c5a88fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NTU3NjV8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 14
+                    },
+                    {
+                      "type": "text",
+                      "id": "CCpqm",
+                      "name": "t3",
+                      "fill": "#F1E6D0",
+                      "content": "甘味と抹茶",
+                      "fontFamily": "Noto Serif JP",
+                      "fontSize": 30,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "8psGO",
+                      "name": "d3",
+                      "fill": "#CFBF9F",
+                      "content": "食後に静けさを残す、控えめな甘味と香り高い一服。",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GzlUZ",
+          "name": "Reserve",
+          "width": "fill_container",
+          "height": 860,
+          "fill": "#15110D",
+          "cornerRadius": 20,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": 96,
+          "children": [
+            {
+              "type": "text",
+              "id": "IawL4",
+              "name": "rKick",
+              "fill": "#CFBF9F",
+              "content": "ご予約",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "D00hb",
+              "name": "rTitle",
+              "fill": "#F1E7D2",
+              "content": "静かな夜を、北村で",
+              "fontFamily": "Noto Serif JP",
+              "fontSize": 56,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "ZjM9l",
+              "name": "rCopy",
+              "fill": "#D6C8AC",
+              "content": "2名様からのコース予約を承っております。特別な会食、記念日、海外からのお客様のおもてなしにも対応いたします。",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 22,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "kT3Wx",
+              "name": "rAct",
+              "gap": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ihFVH",
+                  "name": "rBtn",
+                  "width": 220,
+                  "height": 56,
+                  "fill": "#B08A4A",
+                  "cornerRadius": 999,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wT5Ht",
+                      "name": "rBtnTxt",
+                      "fill": "#1A1205",
+                      "content": "オンライン予約",
+                      "fontFamily": "Noto Sans JP",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "DFo48",
+                  "name": "rLink",
+                  "fill": "#F3E7D2",
+                  "content": "お問い合わせ",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "L5DYY",
+          "name": "Footer",
+          "width": "fill_container",
+          "height": 100,
+          "fill": "#0C0A09",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "B5aXp",
+              "name": "f1",
+              "fill": "#D5C4A4",
+              "content": "東京都中央区 / 17:30 - 22:30",
+              "fontFamily": "Noto Sans JP",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "c1yYs",
+              "name": "f2",
+              "fill": "#D5C4A4",
+              "content": "KITAMURA SINCE 1923",
+              "fontFamily": "Noto Serif JP",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

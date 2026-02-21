@@ -124,3 +124,599 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer base {
+  body {
+    margin: 0;
+  }
+}
+
+.kitamura-page {
+  --km-bg: #0d0b09;
+  --km-panel: #15110d;
+  --km-text: #f2e8d2;
+  --km-muted: #cfbf9f;
+  --km-gold: #b99352;
+  --km-line: #2f271d;
+  --hero-progress: 0;
+  background:
+    radial-gradient(1000px 560px at 85% -10%, #3b2f1f66, transparent 65%),
+    radial-gradient(900px 520px at 15% 120%, #402f1f44, transparent 68%),
+    var(--km-bg);
+  color: var(--km-text);
+  height: 100svh;
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+.kitamura-header {
+  position: fixed;
+  inset: 1rem 1rem auto;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ffffff24;
+  background: #0f0b08ba;
+  backdrop-filter: blur(8px);
+  padding: 0.85rem 1rem;
+}
+
+.kitamura-brand {
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+.kitamura-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.kitamura-nav a {
+  position: relative;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: #f8f0dd;
+  opacity: 0.7;
+  transition: opacity 220ms ease, color 220ms ease;
+}
+
+.kitamura-nav a:hover {
+  opacity: 1;
+}
+
+.kitamura-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #c9a86b;
+  transition: transform 220ms ease;
+}
+
+.kitamura-nav a.is-active {
+  opacity: 1;
+  color: #f8e8c8;
+}
+
+.kitamura-nav a.is-active::after {
+  transform: scaleX(1);
+}
+
+.kitamura-main {
+  position: relative;
+}
+
+.kitamura-hero {
+  min-height: 100svh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  overflow: clip;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.kitamura-hero-bg {
+  position: absolute;
+  inset: -12svh -10vw;
+  z-index: -2;
+  background-image: url("/images/hero-first-block.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transform-origin: center;
+  transform: scale(calc(1.12 - (var(--hero-progress) * 0.08)))
+    translateY(calc(var(--hero-progress) * -2.2rem));
+  filter: saturate(calc(1 - (var(--hero-progress) * 0.2)))
+    brightness(calc(0.96 - (var(--hero-progress) * 0.06)));
+  will-change: transform, filter;
+}
+
+.kitamura-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(108deg, #050403f4 8%, #140d0794 54%, #050403f4 94%),
+    radial-gradient(72% 76% at 84% 52%, #c69d5d1f 0%, transparent 68%),
+    linear-gradient(180deg, #00000052 0%, #0000000d 40%, #00000073 100%);
+}
+
+.kitamura-hero-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(125% 100% at 50% -12%, transparent 45%, #00000054 100%),
+    radial-gradient(140% 120% at 50% 118%, #0000006e 10%, transparent 68%);
+  opacity: 0.9;
+}
+
+.kitamura-hero-inner {
+  width: min(1160px, 92vw);
+  position: relative;
+  padding: 8.5rem 0 4.2rem;
+  transform: translateY(calc(var(--hero-progress) * -5rem))
+    scale(calc(1 - (var(--hero-progress) * 0.06)));
+  opacity: calc(1 - (var(--hero-progress) * 0.7));
+  transition: opacity 140ms linear;
+}
+
+.kitamura-kicker {
+  margin: 0;
+  color: var(--km-muted);
+  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+}
+
+.kitamura-title {
+  margin: 1rem 0 0;
+  font-size: clamp(2.1rem, 6vw, 4.9rem);
+  line-height: 1.2;
+  max-width: 15ch;
+}
+
+.kitamura-lead {
+  max-width: 35ch;
+  margin: 1.5rem 0 0;
+  color: #f5ecddcc;
+  line-height: 1.9;
+}
+
+.kitamura-vertical {
+  position: absolute;
+  right: 0;
+  top: 8.5rem;
+  margin: 0;
+  font-size: clamp(1.5rem, 3.5vw, 2.7rem);
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  gap: 0.45rem;
+}
+
+.kitamura-vertical span {
+  color: #f2dec080;
+  font-size: 0.75em;
+}
+
+.kitamura-cta {
+  display: inline-flex;
+  margin-top: 2rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #92713f 0%, #c8a365 100%);
+  color: #150f06;
+  font-size: 0.94rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  padding: 0.88rem 1.5rem;
+  transition: transform 260ms ease, filter 260ms ease;
+}
+
+.kitamura-cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.section-shell {
+  width: min(1160px, 92vw);
+  margin: 0 auto;
+  padding: 6.5rem 0;
+}
+
+.theater-shell {
+  min-height: 320svh;
+  position: relative;
+}
+
+.theater-sticky {
+  position: sticky;
+  top: 0;
+  min-height: 100svh;
+  width: min(1260px, 94vw);
+  margin: 0 auto;
+  padding: 7.3rem 0 3.2rem;
+  display: grid;
+  grid-template-columns: minmax(230px, 320px) 1fr minmax(250px, 320px);
+  gap: clamp(1rem, 2.2vw, 2rem);
+  align-items: center;
+}
+
+.theater-title {
+  margin: 0.85rem 0 0;
+  font-size: clamp(2rem, 3.8vw, 3.05rem);
+}
+
+.theater-copy {
+  margin: 1.1rem 0 0;
+  max-width: 28ch;
+  color: #d8c8a8c7;
+  line-height: 1.8;
+}
+
+.theater-stage {
+  position: relative;
+  min-height: min(76svh, 820px);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #ffffff28;
+  background: #100d0a;
+  transform: scale(calc(0.9 + var(--theater-progress) * 0.1));
+  clip-path: inset(
+    calc((1 - var(--theater-progress)) * 4%)
+    calc((1 - var(--theater-progress)) * 2.2%) round 24px
+  );
+}
+
+.theater-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.theater-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, #08060522 0%, #080605b5 100%),
+    radial-gradient(500px 290px at 80% 30%, #ca9f5c2b, transparent 75%);
+}
+
+.theater-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.theater-note {
+  border-left: 1px solid #ffffff2c;
+  padding: 0.5rem 0 0.5rem 1rem;
+  opacity: 0.26;
+  transform: translateY(18px);
+  transition: opacity 260ms ease, transform 260ms ease, border-color 260ms ease;
+}
+
+.theater-note > p:first-child {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: #a58d66;
+}
+
+.theater-note h3 {
+  margin: 0.45rem 0 0;
+  font-size: 1.24rem;
+}
+
+.theater-note p:last-child {
+  margin: 0.45rem 0 0;
+  color: #d8c8a8cf;
+  line-height: 1.6;
+}
+
+.kitamura-page[data-theater-step="0"] .theater-note[data-step="0"],
+.kitamura-page[data-theater-step="1"] .theater-note[data-step="1"],
+.kitamura-page[data-theater-step="2"] .theater-note[data-step="2"] {
+  opacity: 1;
+  transform: translateY(0);
+  border-left-color: #c9a56a;
+}
+
+.snap-panel {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.kitamura-story {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(1.4rem, 4vw, 3rem);
+  align-items: center;
+  min-height: 100svh;
+}
+
+.section-title {
+  margin: 0.85rem 0 1.4rem;
+  font-size: clamp(1.8rem, 3.5vw, 3.25rem);
+  line-height: 1.35;
+}
+
+.section-copy {
+  margin: 0;
+  max-width: 44ch;
+  color: #f2e5cecc;
+  line-height: 1.95;
+}
+
+.story-photo {
+  min-height: 420px;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, #00000011, #00000088),
+    url("https://images.unsplash.com/photo-1714889988208-1ea67650789f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE2NTQ3NTd8&ixlib=rb-4.1.0&q=80&w=1080")
+      center / cover;
+  border: 1px solid #ffffff1e;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+.menu-card {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #ffffff1f;
+  background: linear-gradient(180deg, #1b1612 0%, #11100c 100%);
+  transform: translateY(0);
+  transition: transform 280ms ease, border-color 280ms ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  border-color: #be9a5f66;
+}
+
+.menu-image {
+  height: 270px;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-card-body {
+  padding: 1rem 1rem 1.35rem;
+}
+
+.menu-card-body h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.menu-card-body p {
+  margin: 0.65rem 0 0;
+  color: #dbc9a9c9;
+  line-height: 1.75;
+}
+
+.reserve-box {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--km-line);
+  border-radius: 20px;
+  background:
+    linear-gradient(130deg, #1e1812cc, #0e0c0ad9),
+    radial-gradient(750px 300px at 95% -20%, #d3ab6a22, transparent 75%);
+  padding: clamp(2rem, 5vw, 3rem);
+}
+
+.reserve-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.reserve-cta {
+  margin-top: 0;
+}
+
+.reserve-link {
+  color: #f3e7d2;
+  text-decoration-color: #f3e7d255;
+  text-underline-offset: 0.35rem;
+}
+
+.kitamura-footer {
+  width: min(1160px, 92vw);
+  margin: 2.2rem auto 0;
+  padding: 1rem 0 2.6rem;
+  border-top: 1px solid #ffffff12;
+  color: #d5c4a4;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(38px);
+  animation: reveal-up linear both;
+  animation-timeline: view();
+  animation-range: entry 8% cover 30%;
+}
+
+@keyframes reveal-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .kitamura-page {
+    scroll-snap-type: y proximity;
+  }
+
+  .kitamura-story {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kitamura-vertical {
+    right: 0.5rem;
+  }
+
+  .kitamura-hero-bg {
+    background-attachment: scroll;
+  }
+
+  .theater-shell {
+    min-height: auto;
+  }
+
+  .theater-sticky {
+    position: relative;
+    top: auto;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 5.8rem 0 4rem;
+  }
+
+  .theater-stage {
+    min-height: 420px;
+    order: 2;
+  }
+
+  .theater-notes {
+    order: 3;
+  }
+}
+
+@media (max-width: 700px) {
+  .kitamura-header {
+    inset: 0.7rem 0.7rem auto;
+    padding: 0.75rem 0.8rem;
+    border-radius: 0.9rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .kitamura-nav {
+    width: 100%;
+    gap: 0.4rem;
+    justify-content: space-between;
+  }
+
+  .kitamura-nav a {
+    background: #ffffff10;
+    border: 1px solid #ffffff22;
+    border-radius: 999px;
+    padding: 0.4rem 0.65rem;
+    letter-spacing: 0.04em;
+    font-size: 0.72rem;
+  }
+
+  .kitamura-hero-inner {
+    padding-top: 8rem;
+  }
+
+  .kitamura-vertical {
+    display: none;
+  }
+
+  .kitamura-lead {
+    max-width: 29ch;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .section-shell {
+    padding: 5rem 0;
+  }
+
+  .theater-title {
+    font-size: 1.8rem;
+  }
+
+  .theater-copy {
+    font-size: 0.95rem;
+  }
+
+  .theater-stage {
+    min-height: 320px;
+    border-radius: 18px;
+  }
+
+  .theater-note h3 {
+    font-size: 1.1rem;
+  }
+
+  .story-photo {
+    min-height: 280px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-image {
+    height: 220px;
+  }
+
+  .menu-card-body h3 {
+    font-size: 1.3rem;
+  }
+
+  .reserve-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .kitamura-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .kitamura-hero-inner,
+  .kitamura-hero-bg,
+  .theater-stage {
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+
+  .menu-card,
+  .kitamura-cta {
+    transition: none;
+  }
+}
