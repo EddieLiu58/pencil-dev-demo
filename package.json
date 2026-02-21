@@ -8,10 +8,12 @@
     "build:pages": "next build",
     "start": "next start",
     "lint": "eslint",
-    "pages:preview": "wrangler pages dev out --compatibility-date=2026-02-21",
+    "prepages:preview": "npm run build:pages",
+    "pages:preview": "wrangler pages dev out",
     "pages:deploy": "wrangler pages deploy out --project-name pencil-dev-demo"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.16.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.575.0",
